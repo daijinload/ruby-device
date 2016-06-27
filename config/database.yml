@@ -15,18 +15,18 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: ruby-device_development
+  database: ruby_device_test
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ruby-device_test
+  database: ruby_device_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: ruby-device_production
-  username: ruby-device
+  database: ruby_device_test
+  username: root
   password: <%= ENV['RUBY-DEVICE_DATABASE_PASSWORD'] %>
