@@ -1,4 +1,4 @@
-# ruby-device
+# ruby-devise
 deviceの使用感をテストするために、サンプルプロジェクト作成
 
 ## rubyのセットアップはこちらを参考にした
